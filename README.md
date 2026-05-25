@@ -1,2 +1,1 @@
-# tadf_rule_based_filter
-Rule-based filtering of AI-designed TADF emitters.
+This repository hosts the script of automatic rule-based filtering of [ChemBFN](https://github.com/Augus1999/bayesian-flow-network-for-chemistry) generated TADF candidates.
