@@ -58,5 +58,5 @@ if __name__ == "__main__":
     with open(sample_file.replace(".csv", "_filtered.csv"), "w", encoding="utf-8") as g:
         g.write("\n".join(samples_))
     svg = Draw._MolsToGridSVG([MolFromSmiles(s) for s in samples_], 6, (400, 200))
-    with open(sample_file.replace("csv", "_filtered.svg"), "w") as g:
+    with open(sample_file.replace(".csv", "_filtered.svg"), "w") as g:
         g.write(svg)
