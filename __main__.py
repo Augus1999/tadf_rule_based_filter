@@ -46,10 +46,8 @@ if __name__ == "__main__":
         # --- filter out molecules with too many single bonds ---
         rigid = True
         for atom in sample_.GetAtoms():
-            if not atom.GetIsAromatic():
-                if atom.GetAtomicNum() == 1:
-                    continue
-                if atom.GetTotalNumHs() >= 1 or atom.GetAtomicNum() == 6:
+            if not atom.GetIsAromatic() and not atom.GetAtomicNum() == 1:
+                if atom.GetTotalNumHs(True) == 2:
                     rigid = False
         # --- filter out molecules with unsuiatble ring sizes ---
         if rigid and all([4 < len(i) <= 6 for i in ring_info]):
